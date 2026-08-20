@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>XDS / NOVA</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --bg:#020202;
+    --border:rgba(255,255,255,.1);
+}
+
+body{
+    min-height:100vh;
+    color:#fff;
+    background:#020202;
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    overflow-x:hidden;
+}
+
+/* subtle background */
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.12;
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+    background-size:45px 45px;
+}
+
+/* TOP BAR */
+nav{
+    height:74px;
+    padding:0 7%;
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid var(--border);
+    background:rgba(0,0,0,.7);
+    backdrop-filter:blur(20px);
+    position:relative;
+    z-index:10;
+}
+
+.logo{
+    font-size:15px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#666;
+}
+
+/* CENTER CONTENT */
+main{
+    min-height:calc(100vh - 74px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px 100px;
+}
+
+.hero{
+    width:min(600px,100%);
+    text-align:center;
+    animation:fadeUp .5s ease both;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(18px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    font-size:clamp(48px,10vw,82px);
+    letter-spacing:-4px;
+    line-height:.94;
+    font-weight:900;
+    margin-bottom:18px;
+}
+
+h1 span{
+    color:transparent;
+    -webkit-text-stroke:1px rgba(255,255,255,.4);
+}
+
+/* BLACK PANEL */
+.giveaway-box{
+    margin:32px auto 0;
+    padding:28px;
+    border:1px solid var(--border);
+    border-radius:22px;
+    background:#050505;
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.7),
+        inset 0 1px rgba(255,255,255,.04);
+}
+
+/* JOIN BUTTON */
+.join-btn{
+    width:100%;
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#fff;
+    color:#000;
+
+    text-decoration:none;
+    border-radius:12px;
+
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:1.5px;
+
+    transition:.25s;
+}
+
+.join-btn:hover{
+    background:#e8e8e8;
+    transform:translateY(-2px);
+    box-shadow:0 16px 40px rgba(255,255,255,.12);
+}
+
+/* TEXT UNDER BUTTON */
+.info{
+    margin-top:18px;
+    color:#777;
+    font-size:12px;
+    line-height:1.7;
+}
+
+.info strong{
+    color:#aaa;
+}
+
+/* FOOTER */
+footer{
+    position:fixed;
+    bottom:22px;
+    left:0;
+    right:0;
+    text-align:center;
+
+    color:#2a2a2a;
+    font-size:8px;
+    letter-spacing:1.6px;
+}
+
+@media(max-width:600px){
+
+    nav{
+        padding:0 6%;
+    }
+
+    main{
+        padding:30px 18px 80px;
+    }
+
+    h1{
+        letter-spacing:-2.5px;
+    }
+
+    .giveaway-box{
+        padding:20px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">DASHBOARD</div>
+</nav>
+
+<main>
+
+    <section class="hero">
+
+        <h1>XDS <span>/ NOVA</span></h1>
+
+        <div class="giveaway-box">
+
+            <a
+                class="join-btn"
+                href="https://yip.su/2tbyv8"
+                target="_blank"
+                rel="noopener"
+            >
+                JOIN GIVEAWAY
+            </a>
+
+            <div class="info">
+                Join the server that you will be getting directed to.
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>XDS / NOVA</footer>
+
+</body>
+</html>
